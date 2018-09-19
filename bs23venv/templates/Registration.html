@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+   {% block content %}
+<form method="POST" action="/Registration/">
+     {% csrf_token %}
+
+  First name:<br>
+  <input type="text" name="firstName" >
+  <br>
+    Last name:<br>
+  <input type="text" name="lastName" >
+  <br>
+    Email:<br>
+  <input type="text" name="email" >
+  <br>
+    Phone Number:<br>
+  <input type="text" name="phnNum" >
+  <br>
+    Password:<br>
+  <input type="text" name="password" >
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+  {% endblock %}
+</body>
+</html>
